@@ -13,4 +13,7 @@ object Versions {
 
     // Test
     const val JUNIT = "4.13.2"
+
+    // Plugins
+    const val DEPENDENCY_UPDATES = "0.39.0"
 }
