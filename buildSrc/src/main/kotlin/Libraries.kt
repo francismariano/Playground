@@ -10,6 +10,10 @@ object Libraries {
         "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}"
     const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
 
+    // MVIKOTLIN
+    fun MVIKOTLIN(module: String): String =
+        "com.arkivanov.mvikotlin:$module:${Versions.MVIKOTLIN}"
+
     // Test
     const val JUNIT = "junit:junit:${Versions.JUNIT}"
 }

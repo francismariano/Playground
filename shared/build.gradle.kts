@@ -27,7 +27,13 @@ kotlin {
     }
     
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation(Libraries.MVIKOTLIN("mvikotlin"))
+                implementation(Libraries.MVIKOTLIN("mvikotlin-main"))
+                implementation(Libraries.MVIKOTLIN("mvikotlin-extensions-coroutines"))
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))

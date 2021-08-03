@@ -3,6 +3,9 @@ object Versions {
     // Gradle Plugin
     const val ANDROID_GRADLE_PLUGIN = "7.0.0"
 
+    // MVIKOTLIN
+    const val MVIKOTLIN = "3.0.0-alpha01"
+
     // Core
     const val KOTLIN = "1.5.20"
     const val APP_COMPAT = "1.2.0"
