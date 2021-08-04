@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
+    kotlin("plugin.serialization") version Versions.KOTLIN
     id("com.android.library")
 }
 
@@ -27,7 +28,16 @@ kotlin {
     }
     
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation(Libraries.MVIKOTLIN("mvikotlin"))
+                implementation(Libraries.MVIKOTLIN("mvikotlin-main"))
+                implementation(Libraries.MVIKOTLIN("mvikotlin-extensions-coroutines"))
+                implementation(Libraries.COROUTINE)
+                implementation(Libraries.KTOR)
+                implementation(Libraries.KTOR_SERIALIZATION)
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
